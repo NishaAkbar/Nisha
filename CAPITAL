@@ -1,0 +1,21 @@
+// Array of countries with details
+const countries = [
+    { name: 'Afghanistan', capital: 'Kabul', flag: '🇦🇫' },
+    { name: 'Armenia', capital: 'Yerevan', flag: '🇦🇲' },
+    { name: 'Azerbaijan', capital: 'Baku', flag: '🇦🇿' },
+  
+];
+
+// Function to print details of each country
+function printCountryDetails(country) {
+    console.log(`Country: ${country.name}`);
+    console.log(`Capital: ${country.capital}`);
+    console.log(`Flag: ${country.flag}`);
+    console.log('\n'); 
+}
+
+// Filter countries in Asia
+const asianCountries = countries.filter(country => country.continent === 'Asia');
+
+
+asianCountries.forEach(printCountryDetails);
