@@ -1,0 +1,34 @@
+class Person {
+  constructor(name, age, gender, occupation) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.occupation = occupation;
+  }
+
+  // Method to display details of the person
+  displayDetails() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`Gender: ${this.gender}`);
+    console.log(`Occupation: ${this.occupation}`);
+  }
+
+  // Method to update the age of the person
+  updateAge(newAge) {
+    this.age = newAge;
+  }
+}
+
+// Creating an instance of the Person class
+const person1 = new Person("John Doe", 30, "Male", "Software Engineer");
+
+// Displaying details of the person
+person1.displayDetails();
+
+// Updating the age of the person
+person1.updateAge(31);
+
+// Displaying updated details
+console.log("\nAfter updating age:");
+person1.displayDetails();
