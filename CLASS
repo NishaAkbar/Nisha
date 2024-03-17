@@ -1,0 +1,25 @@
+class UberPriceCalculator {
+  constructor(baseFarePerKm, costPerMinute, surgeMultiplier) {
+    this.baseFarePerKm = baseFarePerKm;
+    this.costPerMinute = costPerMinute;
+    this.surgeMultiplier = surgeMultiplier || 1; // Default surge multiplier is 1 (no surge).
+  }
+
+  // Method to calculate the price of the ride
+  calculatePrice(distanceKm, durationMinutes) {
+    const baseFare = distanceKm * this.baseFarePerKm;
+    const timeCost = durationMinutes * this.costPerMinute;
+    const totalPrice = (baseFare + timeCost) * this.surgeMultiplier;
+    return totalPrice;
+  }
+}
+
+// Example usage:
+const calculator = new UberPriceCalculator(2, 0.5); // Base fare: $2 per kilometer, $0.5 per minute
+const
+// Example usage (continued):
+const distance = 10; // Distance of the ride in kilometers
+const duration = 20; // Duration of the ride in minutes
+
+const price = calculator.calculatePrice(distance, duration);
+console.log(`The estimated price for the ride is $${price.toFixed(2)}`);
