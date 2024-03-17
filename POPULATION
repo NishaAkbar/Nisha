@@ -1,0 +1,13 @@
+// Array of countries with population and their corresponding continents
+const countries = [
+    { name: 'Afghanistan', continent: 'Asia', population: 38928000 },
+    { name: 'Armenia', continent: 'Asia', population: 2963243 },
+    { name: 'Azerbaijan', continent: 'Asia', population: 10139177 },
+    // Add population data for other countries...
+];
+
+// Filter countries in Asia with population less than 200,000 (2 lakhs)
+const asiaCountriesWithLowPopulation = countries.filter(country => country.continent === 'Asia' && country.population < 200000);
+
+// Print the list of Asian countries with low population
+console.log(asiaCountriesWithLowPopulation.map(country => country.name));
