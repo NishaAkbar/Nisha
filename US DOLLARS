@@ -1,0 +1,14 @@
+// Array of countries with currency and their corresponding continents
+const countries = [
+    { name: 'Afghanistan', continent: 'Asia', currency: 'Afghan afghani' },
+    { name: 'Armenia', continent: 'Asia', currency: 'Armenian dram' },
+    { name: 'Azerbaijan', continent: 'Asia', currency: 'Azerbaijani manat' },
+    
+];
+
+// Filter countries in Asia that use US dollars as currency
+const asianCountriesWithUSD = countries.filter(country => country.continent === 'Asia' && country.currency === 'United States dollar');
+
+// Print the Asian countries that use US dollars as currency
+console.log("Asian countries that use US dollars as currency:");
+asianCountriesWithUSD.forEach(country => console.log(country.name));
