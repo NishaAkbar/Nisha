@@ -1,0 +1,16 @@
+// Array of countries with population and their corresponding continents
+const countries = [
+    { name: 'Afghanistan', continent: 'Asia', population: 38928000 },
+    { name: 'Armenia', continent: 'Asia', population: 2963243 },
+    { name: 'Azerbaijan', continent: 'Asia', population: 10139177 },
+  
+];
+
+// Filter countries in Asia
+const asianCountries = countries.filter(country => country.continent === 'Asia');
+
+// Calculate total population of Asian countries using reduce
+const totalPopulation = asianCountries.reduce((acc, country) => acc + country.population, 0);
+
+// Print the total population
+console.log("Total population of Asian countries:", totalPopulation);
